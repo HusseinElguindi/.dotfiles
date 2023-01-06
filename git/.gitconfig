@@ -1,0 +1,22 @@
+[user]
+	name = HusseinElguindi
+	email = 34726859+HusseinElguindi@users.noreply.github.com
+[core]
+	autocrlf = false
+	excludesfile = /Users/hussein/.gitignore_global
+    pager = delta
+; [pull]
+; 	rebase = true
+;
+[interactive]
+    diffFilter = delta --color-only
+[add.interactive]
+    useBuiltin = false
+[delta]
+    navigate = true # Use n and N to move between diff sections.
+    light = false # Set to `true` if you prefer light themes.
+    side-by-side = true # Enables the side-by-side view.
+[merge]
+    conflictstyle = diff3
+[diff]
+    colorMoved = default
