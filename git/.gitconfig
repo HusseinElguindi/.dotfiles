@@ -1,13 +1,14 @@
-[user]
-	name = HusseinElguindi
-	email = 34726859+HusseinElguindi@users.noreply.github.com
+[include]
+    path = ~/.git-personal.conf
+[includeIf "gitdir:~/code/dropbase/"]
+    path = ~/.git-work.conf
+; [user]
+;   name = HusseinElguindi
+;   email = 34726859+HusseinElguindi@users.noreply.github.com
 [core]
-	autocrlf = false
-	excludesfile = /Users/hussein/.gitignore_global
+    autocrlf = false
+    excludesfile = /Users/hussein/.gitignore_global
     pager = delta
-; [pull]
-; 	rebase = true
-;
 [interactive]
     diffFilter = delta --color-only
 [add.interactive]
@@ -20,3 +21,7 @@
     conflictstyle = diff3
 [diff]
     colorMoved = default
+[pull]
+    rebase = true
+[alias]
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue) (%an)%Creset' --abbrev-commit

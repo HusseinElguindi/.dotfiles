@@ -62,3 +62,5 @@ vim.opt.completeopt = "menu,menuone,noselect"
 vim.cmd([[
     filetype plugin indent on]])
 vim.opt.backspace = "indent,eol,start"
+
+vim.g.tex_flavor = 'latex'

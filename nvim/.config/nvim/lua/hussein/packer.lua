@@ -63,12 +63,25 @@ return require('packer').startup(function(use)
         }
     }
 
-    use 'JoosepAlviste/nvim-ts-context-commentstring'
-    use 'tpope/vim-commentary'
-
     use 'tpope/vim-surround'
     use 'tpope/vim-repeat'
+    use 'tpope/vim-sleuth'
+
+    use 'tpope/vim-fugitive'
 
     use 'jiangmiao/auto-pairs'
+
+    -- indent guidelines
+    use 'lukas-reineke/indent-blankline.nvim'
+
+    use 'JoosepAlviste/nvim-ts-context-commentstring'
+    use {
+        'numToStr/Comment.nvim',
+        config = function()
+            require('Comment').setup {
+                pre_hook = require('ts_context_commentstring.integrations.comment_nvim').create_pre_hook(),
+            }
+        end
+    }
 end)
 

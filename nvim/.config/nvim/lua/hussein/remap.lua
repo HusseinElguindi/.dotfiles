@@ -15,3 +15,6 @@ vim.keymap.set("n", "<C-Down>", ":resize -3<CR>")
 
 -- correct spelling on C-l
 vim.keymap.set("i", "<C-l>", "<C-g>u<Esc>[s1z=`]a<C-g>u", { silent = true })
+
+-- format code
+vim.keymap.set("n", "<Leader>ff", ":lua vim.lsp.buf.format { async = true }<CR>", { silent = true })

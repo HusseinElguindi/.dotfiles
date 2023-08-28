@@ -113,11 +113,13 @@ alias finder="open -a \"finder\""
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Add Homebrew's executable directory to the front of the PATH
-export PATH=/usr/local/bin:$PATH
+export PATH="/usr/local/bin:$PATH"
 
+export PATH="/opt/homebrew/sbin:$PATH"
 export PATH="/opt/homebrew/bin:$PATH"
+export PATH="/opt/homebrew/bin/qmake:$PATH"
 
 export PATH="$HOME/go/bin:$PATH"
 
-alias debug="docker run -it --rm -v $PWD:/tmp -w /tmp debug-docker:1.0"
+# alias debug="docker run -it --rm -v $PWD:/tmp -w /tmp debug-docker:1.0"
 alias inkscape="/Applications/Inkscape.app/Contents/MacOS/inkscape"

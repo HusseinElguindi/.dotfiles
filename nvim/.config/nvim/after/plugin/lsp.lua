@@ -3,9 +3,9 @@ local lsp = require('lsp-zero')
 lsp.preset('recommended')
 
 lsp.ensure_installed({
-    -- 'tsserver',
+    'tsserver',
     -- 'eslint',
-    'sumneko_lua',
+    -- 'sumneko_lua',
     'rust_analyzer',
     'gopls',
     'pyright',
@@ -111,9 +111,11 @@ lsp.on_attach(function(client, bufnr)
 end)
 
 -- Go format on save
-vim.cmd [[autocmd BufWritePre *.go lua vim.lsp.buf.formatting_sync()]]
+vim.cmd [[autocmd BufWritePre *.go lua vim.lsp.buf.format()]]
 
 lsp.configure('ccls', {force_setup = true})
+lsp.configure('pyright', {root_dir = vim.loop.cwd})
+-- lsp.configure('tsserver', {detached = false})
 
 lsp.setup()
 
