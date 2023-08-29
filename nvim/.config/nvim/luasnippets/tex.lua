@@ -25,11 +25,24 @@ return {
     { condition = in_mathzone }
   ),
   s(
-    { trig = "ff", snippetType = "autosnippet" },
-    fmta("\\frac{<>}{<>}", {
+    { trig = "dm", regTrig = false, wordTrig = true, snippetType = "autosnippet" },
+    fmta(
+      [[
+        \[
+            <>
+        .\] <>
+      ]],
+      {
+        i(1),
+        i(0),
+      }
+    )
+  ),
+  s(
+    { trig = "mk", regTrig = false, wordTrig = true, snippetType = "autosnippet" },
+    fmta("$<>$<>", {
       i(1),
-      i(2),
-    }),
-    { condition = in_mathzone }
+      i(0),
+    })
   ),
 }
