@@ -121,5 +121,8 @@ export PATH="/opt/homebrew/bin/qmake:$PATH"
 
 export PATH="$HOME/go/bin:$PATH"
 
+# Helix runtime path (for TreeSitter grammers) for source build
+export HELIX_RUNTIME="$HOME/code/helix/runtime"
+
 # alias debug="docker run -it --rm -v $PWD:/tmp -w /tmp debug-docker:1.0"
 alias inkscape="/Applications/Inkscape.app/Contents/MacOS/inkscape"
